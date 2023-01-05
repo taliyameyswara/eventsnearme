@@ -54,15 +54,15 @@ var dataHarga = [
   "Free",
 ];
 var link = [
-  "ent1.html",
-  "ent2.html",
-  "ent3.html",
-  "ent4.html",
-  "ent5.html",
-  "ent6.html",
-  "ent7.html",
-  "ent8.html",
-  "ent9.html",
+  "entertaiment/ent1.html",
+  "entertaiment/ent2.html",
+  "entertaiment/ent3.html",
+  "entertaiment/ent4.html",
+  "entertaiment/ent5.html",
+  "entertaiment/ent6.html",
+  "entertaiment/ent7.html",
+  "entertaiment/ent8.html",
+  "entertaiment/ent9.html",
 ];
 
 var item = document.getElementById("item");
