@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Events Near Me" />
+    <meta name="keywords" content="Events Near Me" />
+    <meta name="author" content="Taliya Meyswara" />
+    <title>Events Near Me</title>
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="../entertaiment/style2.css" />
+    <!-- JS File link -->
+
+    <!-- Font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- JS Bootstrap Link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- Sidebar Start -->
+      <aside class="sidebar" id="side_nav">
+        <!-- Brand Name -->
+        <header
+          id="header-box"
+          class="px-4 pt-3 pb-4 d-flex justify-content-between"
+        >
+          <a href="#" class="fs-3">EventsNearMe</a>
+          <button
+            class="btn d-lg-none d-block close-btn py-0"
+            style="color: var(--bg)"
+            id="close"
+          >
+            <i class="fas fa-stream"></i>
+          </button>
+        </header>
+        <!-- Brand Name End-->
+        <ul class="list-unstyled ps-4">
+          <li class="list active">
+            <a
+              href="../entertaiment/entertaiment.html"
+              class="text-decoration-none px-3 py-3 d-block"
+            >
+              <i class="fas fa-home"></i>Dashboard
+            </a>
+          </li>
+          <li class="list">
+            <a
+              href="../entertaiment/saved.html"
+              class="text-decoration-none px-3 py-3 d-block"
+            >
+              <i class="fas fa-bookmark"></i>Saved
+            </a>
+          </li>
+          <li class="list">
+            <a
+              href="../entertaiment/ticket.html"
+              class="text-decoration-none px-3 py-3 d-block"
+            >
+              <i class="fas fa-ticket"></i>Ticket
+            </a>
+          </li>
+          <li class="list">
+            <a
+              href="../entertaiment/create.html"
+              class="text-decoration-none px-3 py-3 d-block"
+            >
+              <i class="fas fa-circle-plus"></i>Create Event
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- Sidebar End -->
+
+      <!-- Content Start -->
+      <div class="content">
+        <!-- Mobile Navbar Start -->
+        <nav class="navbar d-lg-none shadow-sm mb-4">
+          <div class="container-fluid">
+            <button class="btn me-2 ms-2 px-1 py-0 open-btn" id="open">
+              <i class="fas fa-stream"></i>
+            </button>
+
+            <a class="navbar-brand fs-4 fw-bold me-auto" href="#"
+              >EventsNearMe</a
+            >
+
+            <div class="dropdown me-4">
+              <button
+                class="btn btn-transparent dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a class="dropdown-item" href="../login.html">Log in</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../signin.html">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Mobile Navbar End -->
+
+        <!-- Topbar Start -->
+        <section class="topbar d-none d-md-none d-lg-block mt-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 col-lg-8">
+                <!-- Search Box Start -->
+                <form class="d-flex ms-4 me-3">
+                  <input
+                    class="form-control"
+                    id="searchbox"
+                    type="search"
+                    aria-label="Search"
+                    placeholder="Search.."
+                  />
+                  <button class="btn search" type="submit" id="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+                <!-- Search Box End -->
+              </div>
+
+              <!-- Login Signin Start -->
+              <div class="col-xl-3 col-lg-4 col-md-4">
+                <a href="../login.html" class="login fs-5 mx-4">Log in</a>
+                <a href="../signin.html" class="login fs-5 mx-4">Sign in</a>
+              </div>
+              <!-- Login Signin End -->
+            </div>
+          </div>
+        </section>
+        <!-- Topbar End -->
+
+        <!-- Card Header Start -->
+        <section class="card-header mt-md-5 mt-lg-4">
+          <div class="container">
+            <div class="row">
+              <!-- Discover Location Start-->
+              <div class="col-sm-12 col-lg-7 col-xl-8">
+                <section class="discover-card">
+                  <div
+                    class="card ms-xl-4 ms-lg-4 p-5 pb-4 ps-4 pt-4 pe-5 mb-4"
+                  >
+                    <div class="card-body fs-2 fw-bolder">
+                      Discover the Events Near You <br />
+                      and Create Your Own Event!
+                      <div class="d-flex mt-4 getloc">
+                        <i class="fa-solid fa-location-dot p-3"></i>
+                        <button id="location-btn" class="pe-4">
+                          Detect your location
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Discover Location Start-->
+                  <!-- Event Categories Start -->
+                  <section
+                    class="event-categories d-none d-md-none d-xl-block mt-4"
+                  >
+                    <h4 class="fw-bold mx-5">Event Categories</h4>
+
+                    <div class="container mt-4 mx-4">
+                      <div class="row g-2">
+                        <div class="col">
+                          <div class="item-categories active">
+                            <a href="../entertaiment/entertaiment.html"
+                              >Entertaiment</a
+                            >
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="item-categories">
+                            <a href="../exhibition/exhibition.html"
+                              >Exhibition</a
+                            >
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="item-categories">
+                            <a href="../social/social.html">Social</a>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="item-categories">
+                            <a href="../workshop/workshop.html">Workshop</a>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="item-categories">
+                            <a href="../competition/competition.html"
+                              >Competition</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- <div class="col">
+                          <div class="more-categories">
+                            <a href="#">See all</a>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                  </section>
+                  <!-- Event Categories End -->
+                </section>
+
+                <hr class="ms-5 d-none d-xl-block" />
+              </div>
+
+              <!-- Popular Start -->
+              <div class="col-xl-4 col-lg-5 col-md-12">
+                <section class="popular-card">
+                  <div class="card me-md-3 pt-2 pb-3">
+                    <div class="card-body p-lg-4">
+                      <h1 class="title pt-2 pb-2">Popular</h1>
+                      <div class="item">
+                        <div class="card mt-3 mb-3">
+                          <a
+                            href="../entertaiment/blackpink.html"
+                            style="text-decoration: none"
+                          >
+                            <div class="card-body d-flex">
+                              <img
+                                src="../entertaiment/img/popular1.jpg"
+                                alt=""
+                              />
+                              <div class="popular-title ps-2 mt-2">
+                                <h5 class="fs-5 fw-bold">Blackpink Tour</h5>
+                                <p>Jakarta, 20 Jan 2023</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="card mt-3 mb-3">
+                          <a
+                            href="../entertaiment/skz.html"
+                            style="text-decoration: none"
+                          >
+                            <div class="card-body d-flex">
+                              <img src="../entertaiment/img/pop2.jpg" alt="" />
+                              <div class="popular-title ps-2 mt-2">
+                                <h5 class="fs-5 fw-bold">Stray Kids Tour</h5>
+                                <p>Jakarta, 21 March 2023</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="card">
+                          <a
+                            href="../entertaiment/mama.html"
+                            style="text-decoration: none"
+                          >
+                            <div class="card-body d-flex">
+                              <img src="../entertaiment/img/pop3.jpg" alt="" />
+                              <div class="popular-title ps-2 mt-2">
+                                <h5 class="fs-5 fw-bold">MAMA Awards</h5>
+                                <p>Jakarta, 31 May 2023</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- Popular End -->
+              <!-- Categories Mobile Start -->
+              <section class="categories d-lg-none mt-4 ms-lg-3 mt-lg-3 mb-3">
+                <div class="container">
+                  <div class="d-flex justify-content-center">
+                    <button
+                      class="btn categoriesbtn fw-bolder"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseCategories"
+                      aria-expanded="false"
+                    >
+                      Event Categories
+                    </button>
+                  </div>
+
+                  <div class="collapse ms-2" id="collapseCategories">
+                    <div class="row row-sm-cols-3 row-cols-2 mt-3">
+                      <div class="col">
+                        <div class="p-2 item-categories">
+                          <a href="../entertaiment/entertaiment.html"
+                            >Entertaiment</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="p-2 item-categories">
+                          <a href="../exhibition/exhibition.html">Exhibition</a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="p-2 item-categories">
+                          <a href="../social/social.html">Social</a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="p-2 item-categories">
+                          <a href="../workshop/workshop.html">Workshop</a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="p-2 item-categories">
+                          <a href="../competition/competition.html"
+                            >Competition</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Categories Mobile End -->
+            </div>
+            <!--  -->
+          </div>
+        </section>
+        <!-- Card Header End -->
+
+        <!-- Event Card Start -->
+        <section class="event-card mt-2 ms-lg-4 me-lg-4 mb-3" id="event-card">
+          <div class="container">
+            <div class="col-lg-12 col-sm-12">
+              <div class="row gy-3 gy-lg-1 gx-lg-4" id="item">
+                <script src="../entertaiment/entertaiment.js"></script>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Event Card End -->
+
+        <!-- Footer Start -->
+        <footer class="text-center">
+          &copy; 2022 EventsNearMe,
+          <span class="text-muted">Taliya Meyswara</span>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Content End -->
+      </div>
+      <!-- Content End -->
+    </div>
+
+    <script src="../entertaiment/script.js"></script>
+  </body>
+</html>
